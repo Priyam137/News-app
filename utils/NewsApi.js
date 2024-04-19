@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Endpoints
 
-const apiBaseUrl = "https://newsapi.org/v2";
+const apiBaseUrl = "https://newsapi.org/v2/everything?q=tesla&from=2024-03-19&sortBy=publishedAt&apiKey=API_KEY";
 
 const breakingNewsUrl = `${apiBaseUrl}/top-headlines?country=us&apiKey=${newsApiKey}`;
 const recommendedNewsUrl = `${apiBaseUrl}/top-headlines?country=us&category=business&apiKey=${newsApiKey}`;

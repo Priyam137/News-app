@@ -24,9 +24,12 @@ export default function NewsSection({ newsProps }) {
 
   // Hook to set the URL list
   useEffect(() => {
-    const urls = newsProps.map((item) => item.url);
-    setUrlList(urls);
+    if (Array.isArray(newsProps)) {
+      const urls = newsProps.map((item) => item.url);
+      setUrlList(urls);
+    }
   }, [newsProps]);
+  
 
   // Function to handle click on an item
   const handleClick = (item) => {
